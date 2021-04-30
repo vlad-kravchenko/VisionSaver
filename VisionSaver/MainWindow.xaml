@@ -1,0 +1,35 @@
+﻿<Window x:Class="VisionSaver.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VisionSaver"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"
+        StateChanged="Window_StateChanged"
+        Closing="Window_Closing"
+        Title="Vision saver" Height="180" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" FontSize="25" Margin="5" Grid.ColumnSpan="2">Rest interval (min):</TextBlock>
+        <TextBox Name="RestInterval" Grid.Row="0" Grid.Column="2" FontSize="25" Margin="5" KeyDown="TextBox_KeyDown" MaxLength="5"></TextBox>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" FontSize="25" Margin="5" Grid.ColumnSpan="2">Work interval (min):</TextBlock>
+        <TextBox Name="WorkInterval" Grid.Row="1" Grid.Column="2" FontSize="25" Margin="5" KeyDown="TextBox_KeyDown" MaxLength="5"></TextBox>
+
+        <Button Name="Reset" Grid.Row="2" Grid.Column="0" FontSize="25" Margin="5" Click="Reset_Click">Reset</Button>
+        <Button Name="Save" Grid.Row="2" Grid.Column="1" FontSize="25" Margin="5" Click="Save_Click">Save</Button>
+        <Button Name="Start" Grid.Row="2" Grid.Column="2" FontSize="25" Margin="5" Click="Start_Click">Start</Button>
+    </Grid>
+</Window>
